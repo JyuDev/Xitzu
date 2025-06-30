@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xī Tzu - Portfolio</title>
+    <link rel="icon" href="profile.jpg" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Georgia", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-white dark:bg-black text-black dark:text-white transition-colors duration-300"
+  >
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="font-bold text-xl">Xī Tzu</div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <!-- Dark Mode Toggle -->
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              <i data-feather="sun" class="w-5 h-5 hidden dark:block"></i>
+              <i data-feather="moon" class="w-5 h-5 block dark:hidden"></i>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2">
+              <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800"
+      >
+        <div class="px-4 py-2 space-y-2">
+          <a
+            href="#home"
+            class="block py-2 hover:text-gray-600 dark:hover:text-gray-300"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block py-2 hover:text-gray-600 dark:hover:text-gray-300"
+            >About</a
+          >
+          <a
+            href="#experience"
+            class="block py-2 hover:text-gray-600 dark:hover:text-gray-300"
+            >Experience</a
+          >
+          <a
+            href="#projects"
+            class="block py-2 hover:text-gray-600 dark:hover:text-gray-300"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="block py-2 hover:text-gray-600 dark:hover:text-gray-300"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center pt-16"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="mb-8">
+          <img
+            src="profile.jpg"
+            alt="Xī Tzu"
+            class="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-black dark:border-white"
+          />
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Xī Tzu</h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-600 dark:text-gray-300">
+          Lorem • Ipsum • Dolor
+        </p>
+        <p class="text-lg mb-12 max-w-3xl mx-auto leading-relaxed">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
+          explicabo architecto eos quod numquam voluptatum sed at aliquid atque
+          fuga.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#projects"
+            class="bg-black dark:bg-white text-white dark:text-black px-8 py-3 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+          >
+            View My Work
+          </a>
+          <a
+            href="#contact"
+            class="border-2 border-black dark:border-white px-8 py-3 rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+          >
+            Get In Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-900">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+          About Me
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-lg mb-6 leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+              asperiores repudiandae tempore quidem facilis dicta eveniet sunt
+              quisquam repellat! Vitae nisi soluta totam porro maiores veritatis
+              rerum voluptates dolorum quo repudiandae aliquam dolore officiis
+              doloremque voluptas nihil eum, similique facere. Iste doloribus
+              quos necessitatibus libero dolores voluptatibus aliquid
+              doloremque. Itaque?
+            </p>
+            <p class="text-lg mb-6 leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+              dolore nobis illum placeat aspernatur eligendi quidem voluptas
+              blanditiis asperiores, omnis labore iure fugiat velit! Perferendis
+              minus animi quaerat at doloremque.
+            </p>
+            <p class="text-lg leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi
+              atque neque repellendus iusto itaque facere sapiente numquam
+              voluptas expedita?
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-semibold mb-3">Tech Stacks</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-black dark:bg-white text-white dark:text-black px-3 py-1 rounded"
+                  >Python
+                </span>
+                <span
+                  class="bg-black dark:bg-white text-white dark:text-black px-3 py-1 rounded"
+                  >JavaScript</span
+                >
+                <span
+                  class="bg-black dark:bg-white text-white dark:text-black px-3 py-1 rounded"
+                  >PHP
+                </span>
+                <span
+                  class="bg-black dark:bg-white text-white dark:text-black px-3 py-1 rounded"
+                  >Tailwind
+                </span>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-3">Education</h3>
+              <div class="border-l-2 border-black dark:border-white pl-4">
+                <h4 class="font-semibold">Lorem, ipsum dolor.</h4>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  2019 - 2023
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+          Experience
+        </h2>
+        <div class="space-y-12">
+          <div class="border-l-4 border-black dark:border-white pl-8">
+            <div
+              class="flex flex-col md:flex-row md:justify-between md:items-start mb-4"
+            >
+              <div>
+                <h3 class="text-xl font-bold">Lorem, ipsum dolor.</h3>
+                <p class="text-lg text-gray-600 dark:text-gray-300">
+                  lorem Inc.
+                </p>
+              </div>
+              <span
+                class="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0"
+                >Apr 2025 - Present
+              </span>
+            </div>
+            <p class="leading-relaxed">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat,
+              deserunt! Est, quibusdam quaerat. Obcaecati illo quis maxime
+              distinctio magnam fuga?
+            </p>
+          </div>
+
+          <div class="border-l-4 border-black dark:border-white pl-8">
+            <div
+              class="flex flex-col md:flex-row md:justify-between md:items-start mb-4"
+            >
+              <div>
+                <h3 class="text-xl font-bold">Lorem, ipsum.</h3>
+                <p class="text-lg text-gray-600 dark:text-gray-300">
+                  lorem Inc.
+                </p>
+              </div>
+              <span
+                class="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0"
+                >Mar 2024 - Feb 2025</span
+              >
+            </div>
+            <p class="leading-relaxed">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio,
+              quidem voluptatum adipisci corrupti eius officiis magnam ducimus
+              delectus nostrum impedit!
+            </p>
+          </div>
+
+          <div class="border-l-4 border-black dark:border-white pl-8">
+            <div
+              class="flex flex-col md:flex-row md:justify-between md:items-start mb-4"
+            >
+              <div>
+                <h3 class="text-xl font-bold">Lorem, ipsum dolor.</h3>
+                <p class="text-lg text-gray-600 dark:text-gray-300">Google</p>
+              </div>
+              <span
+                class="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0"
+                >Sept 2023 - Feb 2024</span
+              >
+            </div>
+            <p class="leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Laudantium, provident? Nulla, perspiciatis? Sint libero
+              exercitationem dolore, quasi veniam cum perferendis?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+          Featured Projects
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white dark:bg-black border-2 border-black dark:border-white rounded-lg p-6 hover:shadow-lg transition-shadow"
+          >
+            <h3 class="text-xl font-bold mb-4">Lorem, ipsum</h3>
+            <p class="mb-4 leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates ut fugiat doloribus repellat vero nemo.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
+                >Python</span
+              >
+              <span
+                class="text-xs bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
+                >TensorFlow</span
+              >
+              <span
+                class="text-xs bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
+                >React</span
+              >
+            </div>
+            <a
+              href="#"
+              class="inline-flex items-center text-sm hover:underline"
+            >
+              View Project
+              <i data-feather="external-link" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+
+          <div
+            class="bg-white dark:bg-black border-2 border-black dark:border-white rounded-lg p-6 hover:shadow-lg transition-shadow"
+          >
+            <h3 class="text-xl font-bold mb-4">lorem</h3>
+            <p class="mb-4 leading-relaxed">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              sapiente maiores obcaecati numquam explicabo vitae quia quaerat,
+              exercitationem nobis fuga?
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
+                >React Native</span
+              >
+              <span
+                class="text-xs bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
+                >Node.js</span
+              >
+              <span
+                class="text-xs bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
+                >MongoDB</span
+              >
+            </div>
+            <a
+              href="#"
+              class="inline-flex items-center text-sm hover:underline"
+            >
+              View Project
+              <i data-feather="external-link" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+
+          <div
+            class="bg-white dark:bg-black border-2 border-black dark:border-white rounded-lg p-6 hover:shadow-lg transition-shadow"
+          >
+            <h3 class="text-xl font-bold mb-4">Lorem, ipsum dolor</h3>
+            <p class="mb-4 leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              nihil nostrum quasi quibusdam iste totam placeat, rerum omnis
+              expedita tenetur, aliquid dicta. Tempore, quos enim.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
+                >C++</span
+              >
+              <span
+                class="text-xs bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
+                >LLVM</span
+              >
+              <span
+                class="text-xs bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
+                >Assembly</span
+              >
+            </div>
+            <a
+              href="#"
+              class="inline-flex items-center text-sm hover:underline"
+            >
+              View Project
+              <i data-feather="external-link" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8">Let's Connect</h2>
+        <p
+          class="text-lg mb-12 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
+          eum doloremque deserunt velit modi nemo!
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <!-- First 3 items in a row on desktop -->
+          <div class="flex flex-col items-center">
+            <i data-feather="mail" class="w-8 h-8 mb-4"></i>
+            <h3 class="font-semibold mb-2">Email</h3>
+            <a href="mailto:xedsol.08@gmail.com" class="hover:underline"
+              >xitzu@gmail.com</a
+            >
+          </div>
+
+          <div class="flex flex-col items-center">
+            <i data-feather="github" class="w-8 h-8 mb-4"></i>
+            <h3 class="font-semibold mb-2">GitHub</h3>
+            <a href="#" class="hover:underline">github.com/Xī Tzu</a>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <i data-feather="twitter" class="w-8 h-8 mb-4"></i>
+            <h3 class="font-semibold mb-2">X</h3>
+            <a href="#" class="hover:underline" target="_blank">X.com/Xī Tzu</a>
+          </div>
+          <!-- 4th item centered on desktop (spans all 3 columns) -->
+          <div class="flex flex-col items-center md:col-span-3">
+            <i data-feather="linkedin" class="w-8 h-8 mb-4"></i>
+            <h3 class="font-semibold mb-2">LinkedIn</h3>
+            <a href="#" class="hover:underline">linkedin.com/in/xitzu</a>
+          </div>
+        </div>
+
+        <a
+          href="mailto:xedsol.08@gmail.com"
+          class="bg-black dark:bg-white text-white dark:text-black px-8 py-3 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors inline-block"
+        >
+          Send Message
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 dark:bg-gray-900 py-8 text-center">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-gray-600 dark:text-gray-300">© 2025 Xī Tzu.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
